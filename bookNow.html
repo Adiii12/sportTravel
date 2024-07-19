@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header == -->
+    <div class="header">
+      <div class="logo">
+        <a href="./index.html"><img src="./img/logoHome.svg" alt="" /></a>
+      </div>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./search.html">Destinations</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="login">
+        <a href="./login.html">Login</a>
+      </div>
+    </div>
+
+    <!-- hero == -->
+    <div
+      class="aboutHero searchHero"
+      style="
+        height: 80vh;
+        background-image: url('./img/BookNowCover.png') !important;
+      "
+    >
+      <div class="heroInner">
+        <h2>Welcome to Sport Friendly Hotel</h2>
+        <p>
+          Please fill the form to contact us, we will response you as soon as
+          possible, Thank you
+        </p>
+      </div>
+    </div>
+
+    <!-- book now steps here ======= -->
+    <div class="container">
+      <form id="multiStepForm" class="multiStepForm">
+        <div class="step active">
+          <h3>How far along are you in your travel plans?</h3>
+          <div class="inner">
+            <div class="radio-container">
+                <input type="radio" id="radio1" name="customRadio">
+                <label class="custom-radio" for="radio1"></label>
+                <label class="radio-label" for="radio1">I'm still looking for ideas and info.</label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" id="radio2" name="customRadio">
+                <label class="custom-radio" for="radio2"></label>
+                <label class="radio-label" for="radio2">I'm ready to start planning the trip.</label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" id="radio3" name="customRadio">
+                <label class="custom-radio" for="radio3"></label>
+                <label class="radio-label" for="radio3">I want to book as soon as possible.</label>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <h3>In what group capacity will you be traveling?</h3>
+          <div class="inner">
+            <div class="counter-container">
+                <div class="counter">
+                    <p>Adults</p>
+                    <div class="counter-controls">
+                        <button class="decrement">-</button>
+                        <input type="text" class="count" value="2" readonly>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+                <div class="counter">
+                    <p>Younglings (&lt;16)</p>
+                    <div class="counter-controls">
+                        <button class="decrement">-</button>
+                        <input type="text" class="count" value="2" readonly>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+                <div class="counter">
+                    <p>Kids (&lt;12)</p>
+                    <div class="counter-controls">
+                        <button class="decrement">-</button>
+                        <input type="text" class="count" value="2" readonly>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+                <div class="counter">
+                    <p>Babies (&lt;2)</p>
+                    <div class="counter-controls">
+                        <button class="decrement">-</button>
+                        <input type="text" class="count" value="2" readonly>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <h3>Do you know the precise date of your trip?</h3>
+          <div class="inner">
+            <div class="radio-container">
+                <input type="radio" id="radio4" name="customRadio">
+                <label class="custom-radio" for="radio4"></label>
+                <label class="radio-label" for="radio4">Yes</label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" id="radio5" name="customRadio">
+                <label class="custom-radio" for="radio5"></label>
+                <label class="radio-label" for="radio5">No</label>
+            </div>
+            <p>Departure date</p>
+            <input type="date" style="margin-bottom: 20px;" name="Ddate" id="Ddate">
+            <p>Return date</p>
+            <input type="date" name="Rdate" id="Rdate">
+          </div>
+        </div>
+        <div class="step">
+          <h3>Do you know the precise date of your trip?</h3>
+          <div class="inner">
+            <p>Add some note</p>
+            <textarea name="note" id="note" class="note" placeholder="Write your note here"></textarea>
+          </div>
+        </div>
+        <div class="step">
+          <h3>Do you have an account with us?</h3>
+          <div class="inner">
+            <div class="radio-container">
+                <input type="radio" id="radio6" name="customRadio">
+                <label class="custom-radio" for="radio6"></label>
+                <label class="radio-label" for="radio6">Yes, I want to log in.</label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" id="radio7" name="customRadio">
+                <label class="custom-radio" for="radio7"></label>
+                <label class="radio-label" for="radio7">No, I need to create an account.</label>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" class="back" onclick="prevStep()">Back</button>
+          <button type="button" class="next" onclick="nextStep()">Next</button>
+        </div>
+      </form>
+    </div>
+    <div class="footer">
+      <div class="innerFooter">
+        <div class="row">
+          <div class="col">
+            <img class="logo" src="./img/logoHome.svg" alt="" />
+            <p>
+              Sports Friendly Hotels is your ultimate partner for sports travel.
+              Whether you are an avid athlete, an adventure family, or a sports
+              club, we offer the best sports experiences at the lowest prices.
+            </p>
+          </div>
+          <div class="col">
+            <h4>Sports</h4>
+            <ul>
+              <li><a href="#">Sport 1</a></li>
+              <li><a href="#">Sport 2</a></li>
+              <li><a href="#">Sport 3</a></li>
+              <li><a href="#">Sport 4</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Contact us</h4>
+            <a href="tel:+1 (717) 352-9097">+1 (717) 352-9097</a>
+            <a href="mailto:info@yippi.com">info@yippi.com</a>
+            <div class="social">
+              <a href="#"><img src="./img/facebook.svg" alt=""></a>
+              <a href="#"><img src="./img/x.svg" alt=""></a>
+              <a href="#"><img src="./img/instagram.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyRight">
+          <p>© 2024 All Right Reserved | Birdie</p>
+          <div class="links">
+            <a href="#">Privacy policy &nbsp;&nbsp;|&nbsp;&nbsp;</a>
+            <a href="#">Terms of service</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('counter-form');
+            const counters = document.querySelectorAll(".counter");
+
+            counters.forEach(counter => {
+                const decrementButton = counter.querySelector(".decrement");
+                const incrementButton = counter.querySelector(".increment");
+                const countInput = counter.querySelector(".count");
+
+                decrementButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    let count = parseInt(countInput.value, 10);
+                    if (count > 0) {
+                        countInput.value = count - 1;
+                    }
+                });
+
+                incrementButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    let count = parseInt(countInput.value, 10);
+                    countInput.value = count + 1;
+                });
+            });
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                // Handle form submission if needed
+                console.log("Form submitted with values:");
+                counters.forEach(counter => {
+                    const countInput = counter.querySelector(".count");
+                    console.log(countInput.value);
+                });
+            });
+        });
+    </script>
+    <script>
+      var currentStep = 0;
+      showStep(currentStep);
+
+      function showStep(step) {
+        var steps = document.getElementsByClassName("step");
+        var nextButton = document.querySelector(".next");
+        var backButton = document.querySelector(".back");
+
+        for (var i = 0; i < steps.length; i++) {
+          steps[i].classList.remove("active");
+        }
+        steps[step].classList.add("active");
+
+        if (step === 0) {
+          backButton.style.display = "none";
+        } else {
+          backButton.style.display = "inline";
+        }
+
+        if (step === steps.length - 1) {
+          nextButton.innerHTML = "Submit";
+        } else {
+          nextButton.innerHTML = "Next";
+        }
+      }
+
+      function nextStep() {
+        var steps = document.getElementsByClassName("step");
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        } else {
+          document.getElementById("multiStepForm").submit();
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+    </script>
+  </body>
+</html>

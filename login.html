@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="top">
+      <div class="left">
+        <img class="logo" src="./img/logo.svg" alt="" />
+        <div class="contentLeft">
+          <img src="./img/loginCover.png" alt="" />
+          <h2>Welcome to Sport Friendly Hotel</h2>
+        </div>
+      </div>
+      <div class="right">
+        <form action="#">
+          <h5>Sign In to your Account</h5>
+          <p>Welcome back! please enter your detail</p>
+          <div class="login-container">
+            <label for="email">Email Address</label>
+            <input 
+            class="input"
+              type="email"
+              id="email"
+              placeholder="Example@gmail.com"
+              required
+            />
+
+            <label for="password">Password</label>
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                class="input"
+                placeholder="Password"
+                required
+              />
+              <span class="toggle-password" onclick="togglePassword()"><svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.80363 11.6991C8.4281 12.1205 9.18918 12.3753 9.99904 12.3753C12.1457 12.3753 13.8922 10.621 13.8922 8.46489C13.8922 7.65144 13.6385 6.887 13.219 6.25977L12.1554 7.32802C12.331 7.66124 12.4286 8.05326 12.4286 8.46489C12.4286 9.80756 11.3358 10.9052 9.99904 10.9052C9.58923 10.9052 9.19894 10.8072 8.86718 10.6308L7.80363 11.6991ZM16.4288 3.03572C17.8436 4.32939 19.0438 6.07388 19.9415 8.1712C20.0195 8.35741 20.0195 8.57302 19.9415 8.74943C17.8534 13.6301 14.1358 16.5507 9.99872 16.5507H9.98896C8.1058 16.5507 6.30069 15.9332 4.71024 14.8062L2.81731 16.7075C2.67095 16.8545 2.48556 16.9231 2.30017 16.9231C2.11478 16.9231 1.91964 16.8545 1.78303 16.7075C1.5391 16.4625 1.50007 16.0704 1.69522 15.7862L1.72449 15.747L16.1556 1.25202C16.1751 1.23242 16.1946 1.21282 16.2044 1.19322L16.2044 1.1932C16.2239 1.17361 16.2434 1.15401 16.2532 1.13441L17.1704 0.213162C17.4631 -0.0710539 17.9217 -0.0710539 18.2047 0.213162C18.4974 0.497377 18.4974 0.967803 18.2047 1.25202L16.4288 3.03572ZM6.09834 8.46887C6.09834 8.72369 6.12761 8.9785 6.16664 9.21372L2.55642 12.8399C1.58069 11.7031 0.731801 10.331 0.0585441 8.75309C-0.0195147 8.57668 -0.0195147 8.36107 0.0585441 8.17486C2.14662 3.29419 5.86417 0.383429 9.99152 0.383429H10.0013C11.3966 0.383429 12.7529 0.716648 14.0018 1.34388L10.7428 4.61726C10.5087 4.57806 10.255 4.54866 10.0013 4.54866C7.84491 4.54866 6.09834 6.30296 6.09834 8.46887Z" fill="#322825"/>
+                </svg>
+                </span>
+            </div>
+
+            <div class="options">
+              <label style="margin-bottom: 0px;"> <input type="checkbox" style="margin-bottom: 0px;" /> Remember me </label>
+              <a href="#" class="reset-password">Reset Password?</a>
+            </div>
+
+            <button type="submit" class="login-button">Log in</button>
+
+            <div class="divider">Or</div>
+
+            <button type="button" class="google-button">
+              <span class="google-icon"><img src="./img/logogoogle.svg" alt=""></span> Google
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const type =
+          passwordField.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordField.setAttribute("type", type);
+      }
+    </script>
+  </body>
+</html>
